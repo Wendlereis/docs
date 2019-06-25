@@ -31,6 +31,13 @@ The `-p` flag maps the container's port to your machine's port. In this case you
 ```sh 
 $ docker run -p 4000:80 --name my-app node-app:0.1
 ```
+## Run docker image with mapped volume
+
+```sh 
+$ docker run -p 8080:8080 -v $PWD:/usr/src/app -d node-app:0.1
+```
+
+The variable `$PWD` in command above, has the absolute path of the current opened directory
 
 ## Access bash terminal inside the container
 
